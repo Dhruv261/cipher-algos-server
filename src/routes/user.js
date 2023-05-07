@@ -2,7 +2,7 @@ const express = require('express');
 const router = new express.Router();
 const User = require('../models/User');
 
-router.get('/', async (req, res) => {
+router.get('/test', async (req, res) => {
   res.send('Working');
 });
 
