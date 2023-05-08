@@ -18,8 +18,8 @@ app.get('/test-router', async (req, res) => {
 
 app.use(`/.netlify/functions/app`, app);
 
-app.use(userRouter);
-app.use(playlistRouter);
+app.use(`/.netlify/functions/app`, userRouter);
+app.use(`/.netlify/functions/app`, playlistRouter);
 
 // const port = process.env.PORT || 3001;
 // app.listen(port, () => {
