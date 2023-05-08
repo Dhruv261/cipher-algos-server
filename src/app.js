@@ -10,6 +10,14 @@ const playlistRouter = require('./routes/PassWork');
 const ServerlessHttp = require('serverless-http');
 app.use(express.static('public'));
 
+app.get('/test-router', async (req, res) => {
+  res.json({
+    hello: 'hi!',
+  });
+});
+
+app.use(`/.netlify/functions/app`, app);
+
 app.use(userRouter);
 app.use(playlistRouter);
 
