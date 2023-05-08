@@ -7,7 +7,7 @@ require('./database/mongoose');
 app.use(express.json());
 const userRouter = require('./routes/user');
 const playlistRouter = require('./routes/PassWork');
-const ServerlessHttp = require('serverless-http');
+const serverless = require('serverless-http');
 app.use(express.static('public'));
 
 app.use(userRouter);
@@ -18,4 +18,4 @@ app.use(playlistRouter);
 //   console.log(`Server started at ${port}`);
 // });
 
-module.exports.handler = ServerlessHttp(app);
+module.exports.handler = serverless(app);
