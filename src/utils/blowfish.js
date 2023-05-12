@@ -29,5 +29,4 @@ const decryptMessage = (key, encryptedMessage) => {
   const decrypted = bf.decrypt(bf.base64Decode(encryptedMessage));
   return decrypted;
 }
-
 module.exports = { encryptMessage, decryptMessage };
